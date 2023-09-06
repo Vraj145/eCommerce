@@ -1,0 +1,92 @@
+.container{
+    position: relative;
+}
+/* Center the search box at the top */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+  }
+  
+  /* Search box container */
+  .search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 12px 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 50%;
+    margin: 14px auto;
+  }
+  
+  /* Search input field */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 14px;
+    flex-grow: 1;
+    margin-right: 10px;
+    outline: none; /* Remove the default input focus outline */
+  }
+  
+  /* Search button */
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none; /* Remove the default button focus outline */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+.btn{
+  color: black;
+  background-color: #83e6e4;
+  margin-top: 8px;
+}
+
+.content{
+  padding: 20px;
+}
+
+
+ /* Cart */
+ .Cart{
+    position: absolute;
+    right: 0PX;
+    top: 25%;
+ }
+
+.Cart i{
+    font-size: 40px;
+}  
+/* Medicine */
+
+  .medicine img{
+    width: 250px;
+    height: 200px;
+  
+  }
+
+  .medicine{
+    display: flex; 
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 23px;
+  }
+  .borderm{
+    border: 2px solid blue;
+    /* padding: 5px; */
+    border-radius: 5px;
+    width: 250px;
+  }
