@@ -1,0 +1,50 @@
+<form class="container">
+
+    <div class="form">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="Enter First name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Enter Last name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Mobile Number</mat-label>
+        <input type="number" matInput placeholder="Enter Mobile Number" value="Sushi">
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Zip Code</mat-label>
+        <input type="number" matInput placeholder="Enter Zip-Code" value="Sushi">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Date Of Birth</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>Blood Group</mat-label>
+        <input matInput placeholder="Enter blood group">
+      </mat-form-field>
+
+    <mat-form-field>
+    <mat-label>Gender</mat-label>
+    <mat-select>
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+    </mat-select>
+</mat-form-field>
+
+  
+</div>
+
+</form>

@@ -1,0 +1,23 @@
+<div class="container">
+
+    <h3>{{title}}</h3>
+
+<div class="cartlist" *ngFor=" let medicine of medicine">
+    <div class="cartlist-image">
+        <img src="../../assets/medicines.jpg" alt="medicine" />
+    </div>
+
+    <div class="medicine-details">
+        Medicine_name : {{medicine.medicine_name}}
+    </div>
+
+    <div class="item-counter">
+        <button (click)="decrementItem(medicine)">-</button>
+        <span style="margin: 0px 10px">{{ medicine.itemCount || 0 }}</span>
+        <button (click)="incrementItem(medicine)">+</button>
+    </div>
+</div>
+<button (click)="addpatient()" class="btn btn-success">Add Patient</button>
+</div>
+
+

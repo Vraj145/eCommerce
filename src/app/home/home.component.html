@@ -2,12 +2,13 @@
 
  <form [formGroup]="searchForm">
    <div class="search-box">
-     <input type="text" formControlName="searchTerm" placeholder="Search products.....">
+     <input type="text" formControlName="searchTerm" placeholder="Search products .....">
      <button type="submit">Search</button>
    </div>
  </form>
  <div class="Cart">
-    <i class="fa-solid fa-cart-shopping" style="color: #155ad1;"></i>
+   <span class="cartcount">{{cartItemsCount}}</span> 
+    <i (click)="gotocart()" class="fa-solid fa-cart-shopping" style="color: #155ad1;"></i>
  </div>
 </div>
 
@@ -15,20 +16,31 @@
      
 
 <div class="medicine">
-    <div  *ngFor="let medicine of medicines" class="borderm">
-        <img src="../../assets/medicines.jpg" alt="medicine">
-        <div class="content">
+    <div *ngFor="let medicine of medicines" class="borderm">
+      <img src="../../assets/medicines.jpg" alt="medicine" />
+      <div class="content">
             <div>
-                Medicine_name: {{medicine.medicine_name}}
+                 Medicine_name: {{ medicine.medicine_name }}
             </div>
             <div>
-                 Medicine Mrp: {{medicine.mrp}}
+                 Medicine Mrp: {{ medicine.mrp }}
             </div>
             <div>
-                Medicine Price: {{medicine.price}}
+                 Medicine Price: {{ medicine.price }}
             </div>
-            <button class="btn">Add Cart</button>
-        </div>
-          
+     
+            <div style="margin-top: 14px;">
+                <button class="btn" (click)="addToCart(medicine)">Add Cart</button>
+       
+                
+                <div class="item-counter">
+                    <button (click)="decrementItem(medicine)">-</button>
+                    <span style="margin: 0px 10px">{{ medicine.itemCount || 0 }}</span>
+                    <button (click)="incrementItem(medicine)">+</button>
+                </div>
+            </div>
+        </div>  
     </div>
-</div>
+  </div>
+
+  

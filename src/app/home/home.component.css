@@ -51,7 +51,7 @@
 .btn{
   color: black;
   background-color: #83e6e4;
-  margin-top: 8px;
+  margin-top: 0px;
 }
 
 .content{
@@ -60,15 +60,42 @@
 
 
  /* Cart */
+
  .Cart{
     position: absolute;
     right: 0PX;
     top: 25%;
  }
+ .cartcount{
+  position: absolute;
+    right: 0;
+    top: -20px;
+    color: #188c18
+ }
 
 .Cart i{
     font-size: 40px;
 }  
+
+.item-counter {
+  display: inline-flex; 
+  border: 1px solid #0c3e5b; 
+  border-radius: 5px; 
+  padding: 5px; 
+  margin-left: 14px;
+}
+
+.item-counter button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+
+/* Style for the + button */
+.item-counter button:last-child {
+  margin-left: 5px; 
+}
 /* Medicine */
 
   .medicine img{
@@ -89,4 +116,6 @@
     /* padding: 5px; */
     border-radius: 5px;
     width: 250px;
+    overflow: hidden;;
   }
+
